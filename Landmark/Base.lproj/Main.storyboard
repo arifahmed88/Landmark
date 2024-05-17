@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,70 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Landmark" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0FN-El-RJt" userLabel="CollectionHolderView">
+                                <rect key="frame" x="0.0" y="79" width="390" height="765"/>
+                                <color key="backgroundColor" systemColor="viewFlipsideBackgroundColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cYt-Qj-clr">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="79"/>
+                                <subviews>
+                                    <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lR4-NX-nxE">
+                                        <rect key="frame" x="0.0" y="0.0" width="390" height="79"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="tDq-8n-d6y">
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="79"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        </view>
+                                        <blurEffect style="systemUltraThinMaterialLight"/>
+                                    </visualEffectView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="lR4-NX-nxE" firstAttribute="leading" secondItem="cYt-Qj-clr" secondAttribute="leading" id="56j-mg-OuB"/>
+                                    <constraint firstAttribute="bottom" secondItem="lR4-NX-nxE" secondAttribute="bottom" id="5M6-2u-i3C"/>
+                                    <constraint firstItem="lR4-NX-nxE" firstAttribute="top" secondItem="cYt-Qj-clr" secondAttribute="top" id="VB4-TR-wMu"/>
+                                    <constraint firstAttribute="trailing" secondItem="lR4-NX-nxE" secondAttribute="trailing" id="xuu-9W-p1r"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Landmarks" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uGA-Wj-utV">
+                                <rect key="frame" x="15.999999999999993" y="47" width="124.33333333333331" height="32"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="viewFlipsideBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cYt-Qj-clr" secondAttribute="trailing" id="11H-0l-Zbt"/>
+                            <constraint firstAttribute="bottom" secondItem="0FN-El-RJt" secondAttribute="bottom" id="CDf-Cc-QpC"/>
+                            <constraint firstItem="uGA-Wj-utV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="SZy-IQ-nhn"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0FN-El-RJt" secondAttribute="trailing" id="Xc5-N0-lwk"/>
+                            <constraint firstItem="0FN-El-RJt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="XnW-oK-MT7"/>
+                            <constraint firstItem="cYt-Qj-clr" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="bUx-Wd-R5a"/>
+                            <constraint firstItem="uGA-Wj-utV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="c88-v6-HaR"/>
+                            <constraint firstItem="cYt-Qj-clr" firstAttribute="bottom" secondItem="uGA-Wj-utV" secondAttribute="bottom" id="chn-NT-ng6"/>
+                            <constraint firstItem="cYt-Qj-clr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="jNB-yo-Ynw"/>
+                            <constraint firstItem="0FN-El-RJt" firstAttribute="top" secondItem="cYt-Qj-clr" secondAttribute="bottom" id="xRe-8D-ADr"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="blurView" destination="lR4-NX-nxE" id="oNu-i5-DmB"/>
+                        <outlet property="collectionHolderView" destination="0FN-El-RJt" id="Jm2-HM-49r"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="34" y="4"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="viewFlipsideBackgroundColor">
+            <color red="0.12156862745098039" green="0.12941176470588237" blue="0.14117647058823529" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>

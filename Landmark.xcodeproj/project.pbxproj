@@ -13,6 +13,14 @@
 		BA566E602BF7126300752B2F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA566E5E2BF7126300752B2F /* Main.storyboard */; };
 		BA566E622BF7126400752B2F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA566E612BF7126400752B2F /* Assets.xcassets */; };
 		BA566E652BF7126400752B2F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA566E632BF7126400752B2F /* LaunchScreen.storyboard */; };
+		BA566E6E2BF7147300752B2F /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = BA566E6D2BF7147300752B2F /* SnapKit */; };
+		BA566E742BF715CD00752B2F /* LandMarkCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA566E722BF715CD00752B2F /* LandMarkCollectionViewCell.swift */; };
+		BA566E752BF715CD00752B2F /* LandMarkCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA566E732BF715CD00752B2F /* LandMarkCollectionViewCell.xib */; };
+		BA566E782BF7174400752B2F /* NSObject+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA566E772BF7174400752B2F /* NSObject+Extention.swift */; };
+		BA566E7B2BF71A8700752B2F /* landmarkData.json in Resources */ = {isa = PBXBuildFile; fileRef = BA566E7A2BF71A8700752B2F /* landmarkData.json */; };
+		BA566E7E2BF71ACA00752B2F /* LandMarkInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA566E7D2BF71ACA00752B2F /* LandMarkInfo.swift */; };
+		BA566E812BF71B0700752B2F /* JsonHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA566E802BF71B0700752B2F /* JsonHelper.swift */; };
+		BA566E852BF7207F00752B2F /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA566E842BF7207F00752B2F /* ViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +32,13 @@
 		BA566E612BF7126400752B2F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BA566E642BF7126400752B2F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BA566E662BF7126400752B2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BA566E722BF715CD00752B2F /* LandMarkCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandMarkCollectionViewCell.swift; sourceTree = "<group>"; };
+		BA566E732BF715CD00752B2F /* LandMarkCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LandMarkCollectionViewCell.xib; sourceTree = "<group>"; };
+		BA566E772BF7174400752B2F /* NSObject+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+Extention.swift"; sourceTree = "<group>"; };
+		BA566E7A2BF71A8700752B2F /* landmarkData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = landmarkData.json; sourceTree = "<group>"; };
+		BA566E7D2BF71ACA00752B2F /* LandMarkInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandMarkInfo.swift; sourceTree = "<group>"; };
+		BA566E802BF71B0700752B2F /* JsonHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonHelper.swift; sourceTree = "<group>"; };
+		BA566E842BF7207F00752B2F /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA566E6E2BF7147300752B2F /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,15 +72,78 @@
 		BA566E572BF7126300752B2F /* Landmark */ = {
 			isa = PBXGroup;
 			children = (
+				BA566E762BF7173200752B2F /* Extention */,
+				BA566E7F2BF71AF800752B2F /* Helper */,
+				BA566E7C2BF71AA600752B2F /* Model */,
+				BA566E822BF7202D00752B2F /* View */,
+				BA566E832BF7206F00752B2F /* ViewModel */,
+				BA566E792BF71A0F00752B2F /* Resources */,
 				BA566E582BF7126300752B2F /* AppDelegate.swift */,
 				BA566E5A2BF7126300752B2F /* SceneDelegate.swift */,
-				BA566E5C2BF7126300752B2F /* ViewController.swift */,
 				BA566E5E2BF7126300752B2F /* Main.storyboard */,
 				BA566E612BF7126400752B2F /* Assets.xcassets */,
 				BA566E632BF7126400752B2F /* LaunchScreen.storyboard */,
 				BA566E662BF7126400752B2F /* Info.plist */,
 			);
 			path = Landmark;
+			sourceTree = "<group>";
+		};
+		BA566E712BF715B600752B2F /* CVCell */ = {
+			isa = PBXGroup;
+			children = (
+				BA566E722BF715CD00752B2F /* LandMarkCollectionViewCell.swift */,
+				BA566E732BF715CD00752B2F /* LandMarkCollectionViewCell.xib */,
+			);
+			path = CVCell;
+			sourceTree = "<group>";
+		};
+		BA566E762BF7173200752B2F /* Extention */ = {
+			isa = PBXGroup;
+			children = (
+				BA566E772BF7174400752B2F /* NSObject+Extention.swift */,
+			);
+			path = Extention;
+			sourceTree = "<group>";
+		};
+		BA566E792BF71A0F00752B2F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BA566E7A2BF71A8700752B2F /* landmarkData.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		BA566E7C2BF71AA600752B2F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BA566E7D2BF71ACA00752B2F /* LandMarkInfo.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BA566E7F2BF71AF800752B2F /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				BA566E802BF71B0700752B2F /* JsonHelper.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		BA566E822BF7202D00752B2F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BA566E5C2BF7126300752B2F /* ViewController.swift */,
+				BA566E712BF715B600752B2F /* CVCell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BA566E832BF7206F00752B2F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				BA566E842BF7207F00752B2F /* ViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +162,9 @@
 			dependencies = (
 			);
 			name = Landmark;
+			packageProductDependencies = (
+				BA566E6D2BF7147300752B2F /* SnapKit */,
+			);
 			productName = Landmark;
 			productReference = BA566E552BF7126300752B2F /* Landmark.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +193,9 @@
 				Base,
 			);
 			mainGroup = BA566E4C2BF7126300752B2F;
+			packageReferences = (
+				BA566E6C2BF7147300752B2F /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = BA566E562BF7126300752B2F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -125,8 +210,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA566E752BF715CD00752B2F /* LandMarkCollectionViewCell.xib in Resources */,
 				BA566E652BF7126400752B2F /* LaunchScreen.storyboard in Resources */,
 				BA566E622BF7126400752B2F /* Assets.xcassets in Resources */,
+				BA566E7B2BF71A8700752B2F /* landmarkData.json in Resources */,
 				BA566E602BF7126300752B2F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -138,8 +225,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA566E742BF715CD00752B2F /* LandMarkCollectionViewCell.swift in Sources */,
+				BA566E7E2BF71ACA00752B2F /* LandMarkInfo.swift in Sources */,
 				BA566E5D2BF7126300752B2F /* ViewController.swift in Sources */,
+				BA566E812BF71B0700752B2F /* JsonHelper.swift in Sources */,
 				BA566E592BF7126300752B2F /* AppDelegate.swift in Sources */,
+				BA566E782BF7174400752B2F /* NSObject+Extention.swift in Sources */,
+				BA566E852BF7207F00752B2F /* ViewModel.swift in Sources */,
 				BA566E5B2BF7126300752B2F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -363,6 +455,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		BA566E6C2BF7147300752B2F /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BA566E6D2BF7147300752B2F /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BA566E6C2BF7147300752B2F /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = BA566E4D2BF7126300752B2F /* Project object */;
 }
